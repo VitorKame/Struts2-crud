@@ -1,0 +1,193 @@
+body, html {
+	margin: 0%;
+	height: 100%
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #F5F5F5;
+}
+
+.top {
+	overflow: hidden;
+	background-color: #5C9AFF;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.top a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.top a:hover {
+	background: #ddd;
+	color: black;
+}
+
+.page {
+	margin-top: 60px;
+	width: 100%;
+	background-color: #F5F5F5;
+	float: left;
+	text-align: center;
+}
+
+.titulo {
+	font-size: 65px;
+	font-weight: 600;
+	margin-top: 15%;
+	color: #5C9AFF;
+}
+
+.page .titulo {
+	font-size: 55px;
+}
+
+.dir {
+	position: relative;
+	width: 70%;
+	max-width: 70%;
+	height: 100%;
+	max-height: 100%;
+	background-color: #F5F5F5;
+	float: left;
+	text-align: center;
+}
+
+fieldset {
+	border: 0;
+}
+
+.dir a {
+	font-size: 0.4em;
+	background-color: #5C9AFF;
+	color: #F5F5F5;
+	border: 2px solid #F5F5F5;
+}
+
+.dir input[type="text"], .dir input[type="date"] {
+	width: 450px;
+	padding: 15px;
+	margin-bottom: 5px;
+	border: 0;
+	border-radius: 5px;
+	background-color: #EBEBEB;
+	color: #5C5C5C;
+}
+
+.dir textarea {
+	width: 450px;
+	padding: 15px;
+	margin-bottom: 5px;
+	border: 0;
+	border-radius: 5px;
+	resize: vertical;
+	max-height: 100px;
+	background-color: #EBEBEB;
+}
+
+.dir input[type="button"] {
+	display: inline-block;
+	background-color: #5C9AFF;
+	color: #F5F5F5;
+	border: 0;
+}
+
+::placeholder {
+	color: #5C5C5C;
+	opacity: 1;
+}
+
+.tabela {
+	display: inline-block;
+}
+
+#tabela {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.8em;
+	border-collapse: collapse;
+	width: 90%;
+	margin-right: 20px;
+}
+
+#tabela td, #customers th {
+	border-top: 1px solid #999999;
+	align-content: center;
+	border-bottom: 1px solid #999999;
+	padding: 5px;
+}
+
+#tabela tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#tabela tr:hover {
+	background-color: #ddd;
+}
+
+#tabela th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #F5F5F5;
+	color: #666666;
+}
+
+.acoes {
+	overflow: hidden;
+	width: 120px;
+}
+
+.acoes a {
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 6px 8px;
+	font-size: 1empx;
+	color: black;
+	text-decoration: none;
+}
+
+.esq {
+	position: relative;
+	width: 30%;
+	max-width: 30%;
+	height: 100%;
+	max-height: 100%;
+	background-color: #5C9AFF;
+	float: left;
+	text-align: center;
+}
+
+.esq button {
+	display: inline-block;
+	margin-top: 125%;
+	background-color: #5C9AFF;
+	color: #F5F5F5;
+	border: 2px solid #F5F5F5;
+}
+
+.botao1 {
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	width: 150px;
+	height: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: 500;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.botao1:hover {
+	transform: scale(1.1);
+}
