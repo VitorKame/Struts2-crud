@@ -1,6 +1,6 @@
 package com.exames.actions;
 
-import com.exames.dao.DAO;
+import com.exames.controller.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -13,11 +13,12 @@ public class DeleteAction extends ActionSupport {
 
 	private String id_ex;
 
-	private DAO dao = new DAO();
+	private Controller controle = new Controller();
+	private String retorno;
 
 	public String execute() {
 
-		dao.deleteExame(id_ex);
+		retorno = controle.deleteExame(id_ex);
 
 		return "DELETE";
 
@@ -31,4 +32,11 @@ public class DeleteAction extends ActionSupport {
 		this.id_ex = id_ex;
 	}
 
+	public String getRetorno() {
+		return retorno;
+	}
+
+	public void setRetorno(String retorno) {
+		this.retorno = retorno;
+	}
 }

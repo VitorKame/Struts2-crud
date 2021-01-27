@@ -2,8 +2,9 @@ package com.exames.actions;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import com.exames.dao.DAO;
+
 import com.exames.model.ExmBean;
+import com.exames.controller.Controller;
 
 public class UpdateAction extends ActionSupport {
 
@@ -18,23 +19,17 @@ public class UpdateAction extends ActionSupport {
 	private String dt_ex;
 	private String obs_ex;
 
-	private DAO dao = new DAO();
-	private ExmBean exame = new ExmBean();
-	private ExmBean attExame = new ExmBean();
+	private Controller controle = new Controller();
 
+	private ExmBean exame = new ExmBean();
+	
 	public String execute() {
 
 		if (nm_pac == null || nm_ex == null || dt_ex == null || obs_ex == null) {
-			exame = dao.readExame(id_ex);
+			exame = controle.readExame(id_ex);
 			return "UPDATE";
 		} else {
-			attExame.setId_ex(id_ex);
-			attExame.setNm_pac(nm_pac);
-			attExame.setNm_ex(nm_ex);
-			attExame.setDt_ex(dt_ex);
-			attExame.setObs_ex(obs_ex);
-
-			dao.updateExame(attExame);
+			controle.updateExame(id_ex, nm_pac, nm_ex, dt_ex, obs_ex);
 			return "READ";
 		}
 	}

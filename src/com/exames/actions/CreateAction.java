@@ -1,7 +1,6 @@
 package com.exames.actions;
 
-import com.exames.dao.DAO;
-import com.exames.model.ExmBean;
+import com.exames.controller.Controller;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CreateAction extends ActionSupport {
@@ -12,20 +11,13 @@ public class CreateAction extends ActionSupport {
 	private String nm_ex;
 	private String dt_ex;
 	private String obs_ex;
+	private String retorno;
 
-	private String retorno, sucesso = "Sucesso";
-
-	DAO dao = new DAO();
-	ExmBean exame = new ExmBean();
+	Controller controle = new Controller();
 
 	public String execute() {
 
-		exame.setNm_pac(nm_pac);
-		exame.setNm_ex(nm_ex);
-		exame.setDt_ex(dt_ex);
-		exame.setObs_ex(obs_ex);
-
-		retorno = dao.createExame(exame);
+		retorno = controle.createExame(nm_pac, nm_ex, dt_ex, obs_ex);
 
 		return "CREATE";
 	}
@@ -68,14 +60,6 @@ public class CreateAction extends ActionSupport {
 
 	public void setRetorno(String retorno) {
 		this.retorno = retorno;
-	}
-
-	public String getSucesso() {
-		return sucesso;
-	}
-
-	public void setSucesso(String sucesso) {
-		this.sucesso = sucesso;
 	}
 
 }

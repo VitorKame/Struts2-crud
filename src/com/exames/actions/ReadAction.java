@@ -3,7 +3,7 @@ package com.exames.actions;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.exames.dao.DAO;
+import com.exames.controller.Controller;
 import com.exames.model.ExmBean;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -15,13 +15,16 @@ public class ReadAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private DAO dao = new DAO();
+	private boolean retorno;
+	
+	private Controller controle = new Controller();
+	
 	List<ExmBean> listaExames = new ArrayList<ExmBean>();
 
 	public String execute() throws Exception {
-
-		listaExames = dao.readExames();
-
+		
+		listaExames = controle.readExames();
+		
 		return "READ";
 	}
 
@@ -32,5 +35,15 @@ public class ReadAction extends ActionSupport {
 	public void setListaExames(List<ExmBean> listaExames) {
 		this.listaExames = listaExames;
 	}
+
+	public boolean getRetorno() {
+		return retorno;
+	}
+
+	public void setRetorno(boolean retorno) {
+		this.retorno = retorno;
+	}
+	
+	
 
 }
