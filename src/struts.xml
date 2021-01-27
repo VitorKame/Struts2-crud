@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<package name="struts2-crud" extends="struts-default">
+
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+
+		<action name="newExame">
+			<result>/create.jsp</result>
+		</action>
+
+		<action name="create" class="com.exames.actions.CreateAction">
+			<result name="CREATE">/create.jsp</result>
+		</action>
+
+		<action name="delete" class="com.exames.actions.DeleteAction">
+			<result name="DELETE">/index.jsp</result>
+		</action>
+
+		<action name="update" class="com.exames.actions.UpdateAction">
+			<result name="UPDATE">/update.jsp</result>
+			<result name="READ">/index.jsp</result>
+		</action>
+
+		<action name="read" class="com.exames.actions.ReadAction">
+			<result name="READ">/read.jsp</result>
+		</action>
+
+	</package>
+</struts>
