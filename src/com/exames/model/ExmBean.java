@@ -10,7 +10,6 @@ public class ExmBean {
 
 	public ExmBean() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public ExmBean(String id_ex, String nm_pac, String nm_ex, String dt_ex, String obs_ex) {
